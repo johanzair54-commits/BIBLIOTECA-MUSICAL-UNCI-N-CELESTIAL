@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Biblioteca Musical</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <header class="biblioteca-header">
+
+    <div class="header-brillo"></div>
+
+    <div class="header-contenido">
+
+        <img
+            src="LOGO DE MINISTERIO DE ALABANZA UNCIÓN CELESTIAL.png"
+            alt="Ministerio de Alabanza"
+            class="logo-ministerio"
+        >
+
+        <div class="titulo-biblioteca">
+
+            <h1>
+                🎵 Biblioteca Musical
+            </h1>
+
+            <p>
+                Tu colección personal de canciones
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <main class="contenedor">
+
+        <!-- BUSCADOR -->
+
+<input
+    id="buscador"
+    class="buscador"
+    type="text"
+    placeholder="🔎 Buscar canción, artista, tonalidad..."
+>
+
+
+        <!-- FILTRO -->
+
+        <select id="filtroTonalidad" class="filtro">
+
+            <option value="">
+                🎼 Todas las tonalidades
+            </option>
+
+            <option value="Do mayor">Do mayor</option>
+            <option value="Do menor">Do menor</option>
+
+            <option value="Re mayor">Re mayor</option>
+            <option value="Re menor">Re menor</option>
+
+            <option value="Mi mayor">Mi mayor</option>
+            <option value="Mi menor">Mi menor</option>
+
+            <option value="Fa mayor">Fa mayor</option>
+            <option value="Fa menor">Fa menor</option>
+
+            <option value="Sol mayor">Sol mayor</option>
+            <option value="Sol menor">Sol menor</option>
+
+            <option value="La mayor">La mayor</option>
+            <option value="La menor">La menor</option>
+
+            <option value="Si mayor">Si mayor</option>
+            <option value="Si menor">Si menor</option>
+
+        </select>
+
+
+        <!-- BOTÓN AGREGAR -->
+
+        <button
+            class="boton"
+            id="btnAgregar">
+
+            ➕ Agregar canción
+
+        </button>
+<button
+    id="btnRepertorios"
+    class="boton boton-repertorios"
+    type="button">
+    📚 Repertorios
+</button>
+
+<button id="btnConexiones" class="boton boton-conexiones">
+    🔗 Conexiones
+</button>
+
+        <!-- FORMULARIO -->
+
+        <div
+            id="formularioCancion"
+            style="display: none;">
+
+            <h2>🎵 Nueva canción</h2>
+
+<label>
+    🖼️ Portada de la canción
+</label>
+
+<input
+    type="text"
+    id="portadaCancion"
+    placeholder="Pega aquí la URL de la imagen">
+    
+            <label>
+                Nombre de la canción
+            </label>
+
+            <input
+                type="text"
+                id="nombreCancion"
+                placeholder="Ej: Dios Incomparable">
+
+
+            <label>
+                Artista
+            </label>
+
+            <input
+                type="text"
+                id="artistaCancion"
+                placeholder="Ej: Marcos Barrientos">
+
+
+            <label>
+                Tonalidad
+            </label>
+
+            <input
+                type="text"
+                id="tonalidadCancion"
+                placeholder="Ej: La menor (Am)">
+
+
+            <label>
+                BPM
+            </label>
+
+            <input
+                type="number"
+                id="bpmCancion"
+                placeholder="Ej: 78">
+
+
+            <label>
+                Acordes
+            </label>
+
+            <input
+                type="text"
+                id="acordesCancion"
+                placeholder="Ej: Am - F - C - G">
+
+
+    
+            
+
+           <label>🎼 Notas</label>
+
+<div id="editorNotas">
+
+    <div class="bloque-seccion">
+
+        <select class="tipo-seccion">
+            <option value="INTRO">INTRO</option>
+            <option value="VERSO 1">VERSO 1</option>
+            <option value="VERSO 2">VERSO 2</option>
+            <option value="PRE-CORO">PRE-CORO</option>
+            <option value="CORO">CORO</option>
+            <option value="PUENTE">PUENTE</option>
+            <option value="INTERLUDIO">INTERLUDIO</option>
+            <option value="INSTRUMENTAL">INSTRUMENTAL</option>
+            <option value="SOLO">SOLO</option>
+            <option value="FINAL">FINAL</option>
+            <option value="OTRO">OTRO</option>
+        </select>
+
+        <textarea
+            class="contenido-seccion-editor"
+            placeholder="Escribe aquí las notas..."
+        ></textarea>
+
+        <button
+            type="button"
+            class="btn-eliminar-seccion"
+            onclick="this.parentElement.remove()"
+        >
+            🗑️ Eliminar sección
+        </button>
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    class="btn-agregar-seccion"
+    onclick="agregarSeccion('editorNotas')"
+>
+    ➕ Agregar sección
+</button>
+
+
+            <label>
+                Letra
+            </label>
+
+            <label>🎵 Letra</label>
+
+<div id="editorLetra">
+
+    <div class="bloque-seccion">
+
+        <select class="tipo-seccion">
+            <option value="INTRO">INTRO</option>
+            <option value="VERSO 1">VERSO 1</option>
+            <option value="VERSO 2">VERSO 2</option>
+            <option value="PRE-CORO">PRE-CORO</option>
+            <option value="CORO">CORO</option>
+            <option value="PUENTE">PUENTE</option>
+            <option value="INTERLUDIO">INTERLUDIO</option>
+            <option value="INSTRUMENTAL">INSTRUMENTAL</option>
+            <option value="SOLO">SOLO</option>
+            <option value="SUBIDA">SUBIDA</option>
+            <option value="BAJADA">BAJADA</option>
+            <option value="FINAL">FINAL</option>
+            <option value="OTRO">OTRO</option>
+        </select>
+
+        <textarea
+            class="contenido-seccion-editor"
+            placeholder="Escribe aquí la letra..."
+        ></textarea>
+
+        <button
+            type="button"
+            class="btn-eliminar-seccion"
+            onclick="this.parentElement.remove()"
+        >
+            🗑️ Eliminar sección
+        </button>
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    class="btn-agregar-seccion"
+    onclick="agregarSeccion('editorLetra')"
+>
+    ➕ Agregar sección
+</button>
+
+
+         <label>🎺 Notas para trompeta</label>
+
+<div id="editorTrompeta">
+
+    <div class="bloque-seccion">
+
+        <select class="tipo-seccion">
+            <option value="INTRO">INTRO</option>
+            <option value="VERSO 1">VERSO 1</option>
+            <option value="VERSO 2">VERSO 2</option>
+            <option value="PRE-CORO">PRE-CORO</option>
+            <option value="CORO">CORO</option>
+            <option value="PUENTE">PUENTE</option>
+            <option value="INTERLUDIO">INTERLUDIO</option>
+            <option value="INSTRUMENTAL">INSTRUMENTAL</option>
+            <option value="SOLO">SOLO</option>
+            <option value="FINAL">FINAL</option>
+            <option value="OTRO">OTRO</option>
+        </select>
+
+        <textarea
+            class="contenido-seccion-editor"
+            placeholder="Escribe aquí las notas de trompeta..."
+        ></textarea>
+
+        <button
+            type="button"
+            class="btn-eliminar-seccion"
+            onclick="this.parentElement.remove()"
+        >
+            🗑️ Eliminar sección
+        </button>
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    class="btn-agregar-seccion"
+    onclick="agregarSeccion('editorTrompeta')"
+>
+    ➕ Agregar sección
+</button>
+
+
+            <label>
+                📝 Observaciones
+            </label>
+
+            <textarea
+                id="observacionesCancion"
+                placeholder="Cualquier información adicional"></textarea>
+
+
+            <label>
+                🔗 Video de YouTube
+            </label>
+
+            <input
+                type="text"
+                id="youtubeCancion"
+                placeholder="Pega aquí el enlace de YouTube">
+                <label>
+    🎤 Video de voces
+</label>
+
+<input
+    type="text"
+    id="youtubeVocesCancion"
+    placeholder="Pega aquí el enlace de YouTube de las voces">
+
+
+            <br><br>
+
+
+            <button
+                class="boton"
+                id="btnGuardar">
+
+                💾 Guardar canción
+
+            </button>
+
+        </div>
+
+
+        <!-- LISTA DE CANCIONES -->
+
+        <h2 class="titulo-seccion">
+            Mis canciones
+        </h2>
+
+
+        <div id="listaCanciones"></div>
+
+    </main>
+
+
+    <script src="script.js" defer></script>
+<!-- ==========================================
+     🔄 TRANSPORTADOR DE TONALIDAD
+     ========================================== -->
+
+<button
+    id="btnTransportador"
+    class="boton-transportador"
+    type="button"
+>
+    🔄
+    <span>Transportador</span>
+</button>
+
+
+<div
+    id="panelTransportador"
+    class="panel-transportador"
+    style="display: none;"
+>
+
+    <div class="transportador-cabecera">
+
+        <h2>
+            🔄 Transportador
+        </h2>
+
+        <button
+            id="cerrarTransportador"
+            type="button"
+            class="cerrar-transportador"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <!-- ==========================================
+     🎵 SELECCIONAR CANCIÓN
+     ========================================== -->
+
+<label>
+    🎵 Canción
+</label>
+
+<select id="cancionTransportador">
+
+    <option value="">
+        Selecciona una canción
+    </option>
+
+</select>
+
+
+<!-- ==========================================
+     🎼 TONALIDAD ORIGINAL
+     ========================================== -->
+
+<label>
+    🎼 Tonalidad original
+</label>
+
+<select id="tonalidadOrigen">
+
+    <option value="C">Do mayor</option>
+    <option value="Cm">Do menor</option>
+
+    <option value="C#">Do♯ mayor</option>
+    <option value="C#m">Do♯ menor</option>
+
+    <option value="D">Re mayor</option>
+    <option value="Dm">Re menor</option>
+
+    <option value="D#">Re♯ mayor</option>
+    <option value="D#m">Re♯ menor</option>
+
+    <option value="E">Mi mayor</option>
+    <option value="Em">Mi menor</option>
+
+    <option value="F">Fa mayor</option>
+    <option value="Fm">Fa menor</option>
+
+    <option value="F#">Fa♯ mayor</option>
+    <option value="F#m">Fa♯ menor</option>
+
+    <option value="G">Sol mayor</option>
+    <option value="Gm">Sol menor</option>
+
+    <option value="G#">Sol♯ mayor</option>
+    <option value="G#m">Sol♯ menor</option>
+
+    <option value="A">La mayor</option>
+    <option value="Am">La menor</option>
+
+    <option value="A#">La♯ mayor</option>
+    <option value="A#m">La♯ menor</option>
+
+    <option value="B">Si mayor</option>
+    <option value="Bm">Si menor</option>
+
+</select>
+
+
+<!-- ==========================================
+     🎯 TONALIDAD DESTINO
+     ========================================== -->
+
+<label>
+    🎯 Nueva tonalidad
+</label>
+
+<select id="tonalidadDestino">
+
+    <option value="C">Do mayor</option>
+    <option value="Cm">Do menor</option>
+
+    <option value="C#">Do♯ mayor</option>
+    <option value="C#m">Do♯ menor</option>
+
+    <option value="D">Re mayor</option>
+    <option value="Dm">Re menor</option>
+
+    <option value="D#">Re♯ mayor</option>
+    <option value="D#m">Re♯ menor</option>
+
+    <option value="E">Mi mayor</option>
+    <option value="Em">Mi menor</option>
+
+    <option value="F">Fa mayor</option>
+    <option value="Fm">Fa menor</option>
+
+    <option value="F#">Fa♯ mayor</option>
+    <option value="F#m">Fa♯ menor</option>
+
+    <option value="G">Sol mayor</option>
+    <option value="Gm">Sol menor</option>
+
+    <option value="G#">Sol♯ mayor</option>
+    <option value="G#m">Sol♯ menor</option>
+
+    <option value="A">La mayor</option>
+    <option value="Am">La menor</option>
+
+    <option value="A#">La♯ mayor</option>
+    <option value="A#m">La♯ menor</option>
+
+    <option value="B">Si mayor</option>
+    <option value="Bm">Si menor</option>
+
+</select>
+
+
+        <button
+            id="btnTransportar"
+            type="button"
+            class="boton boton-transportar"
+        >
+            🔄 Transportar
+        </button>
+        
+
+        <div
+            id="resultadoTransportador"
+            class="resultado-transportador"
+        >
+
+            <p>
+                Selecciona las tonalidades
+                y pulsa <strong>Transportar</strong>.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ============================= -->
+<!-- 📚 PANEL DE REPERTORIOS -->
+<!-- ============================= -->
+
+<div id="panelRepertorios" class="panel-repertorios" style="display: none;">
+
+  <div class="encabezado-repertorios">
+    <div>
+      <h2>📚 Mis Repertorios</h2>
+      <p>Organiza tus alabanzas para cada servicio o presentación.</p>
+    </div>
+
+    <button id="cerrarRepertorios" class="boton-cerrar" type="button">
+      ✖
+    </button>
+  </div>
+
+  <div class="acciones-repertorios">
+    <button id="btnNuevoRepertorio" class="boton" type="button">
+      ➕ Nuevo repertorio
+    </button>
+  </div>
+
+  <div id="listaRepertorios" class="lista-repertorios">
+    <div class="sin-repertorios">
+      📚 Todavía no tienes repertorios creados.
+    </div>
+  </div>
+
+</div>
+
+<!-- 🔗 PANEL DE CONEXIONES -->
+<div id="panelConexiones" class="panel-conexiones" style="display: none;">
+
+    <div class="encabezado-conexiones">
+        <div>
+            <h2>🔗 Conexiones</h2>
+            <p>Conecta alabanzas y descubre ideas para tus transiciones.</p>
+        </div>
+
+        <button id="cerrarConexiones" class="boton-cerrar">
+            ✕
+        </button>
+    </div>
+
+    <div class="contenido-conexiones" id="contenidoConexiones">
+    <!-- CONEXIONES será construido mediante JavaScript -->
+</div>
+
+</div>
+
+</body>
+
+</html>

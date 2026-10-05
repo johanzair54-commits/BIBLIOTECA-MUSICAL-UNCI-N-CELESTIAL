@@ -1,0 +1,2247 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #d1d5db;
+}
+
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+========================================== */
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* ==========================================
+   BUSCADOR
+========================================== */
+
+.buscador {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: white;
+}
+
+.buscador:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* ==========================================
+   FILTRO
+========================================== */
+
+.filtro {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+.filtro:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.boton {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+#formularioCancion {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#formularioCancion h2 {
+    margin-top: 0;
+}
+
+#formularioCancion label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formularioCancion input,
+#formularioCancion textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+#formularioCancion input:focus,
+#formularioCancion textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+#formularioCancion textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* ==========================================
+   TÍTULO DE CANCIONES
+========================================== */
+
+.titulo-seccion {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   TARJETA DE CANCIÓN
+========================================== */
+
+.cancion {
+    background: white;
+    margin-top: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   INFORMACIÓN PRINCIPAL
+========================================== */
+
+.tarjeta-cancion {
+    padding: 20px;
+}
+
+.info-principal h3 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.info-principal .artista {
+    margin: 8px 0;
+    color: #555;
+}
+
+.info-principal .tonalidad {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+/* ==========================================
+   PORTADA
+========================================== */
+
+.portada-contenedor {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 18px;
+}
+
+.portada-cancion,
+.portada-placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+}
+
+.portada-cancion {
+    object-fit: cover;
+    display: block;
+}
+
+.portada-placeholder {
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+
+/* ==========================================
+   BOTONES MÚSICOS / VOCES
+========================================== */
+
+.botones-secciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.boton-musicos {
+    background: #7c3aed;
+}
+
+.boton-musicos:hover {
+    background: #6d28d9;
+}
+
+.boton-voces {
+    background: #db2777;
+}
+
+.boton-voces:hover {
+    background: #be185d;
+}
+
+
+/* ==========================================
+   CONTENIDO DETALLADO
+========================================== */
+
+.contenido-detalle {
+    display: none;
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   INFORMACIÓN PARA MÚSICOS
+========================================== */
+
+.detalle-musicos {
+    background: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.detalle-musicos h2 {
+    margin-top: 0;
+}
+
+.dato-musical {
+    background: white;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.dato-musical h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.dato-contenido {
+    line-height: 1.6;
+}
+
+.acordes {
+    font-weight: bold;
+}
+
+.notas {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   INFORMACIÓN PARA VOCES
+========================================== */
+
+.detalle-voces {
+    background: #fdf2f8;
+    border-top: 1px solid #fbcfe8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.detalle-voces h2 {
+    margin-top: 0;
+}
+
+.seccion-letra,
+.seccion-video {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.seccion-letra h3,
+.seccion-video h3 {
+    margin-top: 0;
+}
+
+.letra-cancion {
+    line-height: 1.8;
+    white-space: normal;
+}
+
+
+/* ==========================================
+   VIDEOS DE YOUTUBE
+========================================== */
+
+.video-youtube {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.video-youtube iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+
+.sin-video {
+    padding: 20px;
+    text-align: center;
+    background: #f3f4f6;
+    border-radius: 10px;
+    color: #666;
+}
+
+
+/* ==========================================
+   BOTÓN OCULTAR
+========================================== */
+
+.cerrar-detalle {
+    margin-top: 20px;
+    background: #4b5563;
+}
+
+.cerrar-detalle:hover {
+    background: #374151;
+}
+
+
+/* ==========================================
+   ACCIONES
+========================================== */
+
+.acciones {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.editar {
+    background: #2563eb;
+}
+
+.editar:hover {
+    background: #1d4ed8;
+}
+
+.eliminar {
+    background: #dc2626;
+}
+
+.eliminar:hover {
+    background: #b91c1c;
+}
+
+
+/* ==========================================
+   DISEÑO PARA CELULAR
+========================================== */
+
+@media (max-width: 700px) {
+
+    .contenedor {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .tarjeta-cancion {
+        padding: 15px;
+    }
+
+    .portada-contenedor,
+    .portada-cancion,
+    .portada-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .botones-secciones {
+        flex-direction: column;
+    }
+
+    .botones-secciones .boton {
+        width: 100%;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .acciones .boton {
+        width: 100%;
+    }
+}
+/* ==========================================
+   🎵 SECCIONES MUSICALES
+   ========================================== */
+
+.seccion-musical {
+    margin: 18px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+
+/* ==========================================
+   TÍTULO DE LA SECCIÓN
+   ========================================== */
+
+.titulo-seccion {
+    padding: 12px 16px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    background: #f1f5f9;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+/* ==========================================
+   CONTENIDO
+   ========================================== */
+
+.contenido-seccion {
+    padding: 16px;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+
+    white-space: normal;
+
+    overflow-x: auto;
+
+    word-break: normal;
+}
+
+
+/* ==========================================
+   CONTENIDO SIN SECCIÓN
+   ========================================== */
+
+.contenido-seccion.independiente {
+    padding: 16px;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   LETRA
+   ========================================== */
+
+.letra-cancion {
+    line-height: 1.9;
+
+    font-size: 17px;
+
+    background: #fafafa;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    overflow-x: auto;
+}
+
+
+/* ==========================================
+   NOTAS
+   ========================================== */
+
+.notas {
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    letter-spacing: 0.5px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    padding: 12px;
+}
+
+
+/* ==========================================
+   ACORDES
+   ========================================== */
+
+.acordes {
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    padding: 12px;
+}
+
+
+/* ==========================================
+   INFORMACIÓN MUSICAL
+   ========================================== */
+
+.dato-musical {
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   CONTENIDO VACÍO
+   ========================================== */
+
+.sin-contenido {
+    padding: 15px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-style: italic;
+}
+
+
+/* ==========================================
+   MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .titulo-seccion {
+        font-size: 14px;
+
+        padding: 10px 12px;
+    }
+
+
+    .contenido-seccion {
+        padding: 13px;
+
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+
+    .notas,
+    .acordes {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+}
+
+/* ==========================================
+   🎵 EDITOR DE SECCIONES
+   ========================================== */
+
+.bloque-seccion {
+    padding: 15px;
+    margin-bottom: 15px;
+
+    border: 1px solid #dbe3ec;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+}
+
+
+/* SELECTOR */
+
+.tipo-seccion {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* TEXTO */
+
+.contenido-seccion-editor {
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    background: white;
+}
+
+
+/* BOTÓN AGREGAR */
+
+.btn-agregar-seccion {
+    margin: 5px 0 20px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+/* BOTÓN ELIMINAR */
+
+.btn-eliminar-seccion {
+    margin-top: 10px;
+
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+    .bloque-seccion {
+        padding: 12px;
+    }
+
+    .contenido-seccion-editor {
+        font-size: 15px;
+    }
+
+}
+
+/* ==========================================
+   🔄 BOTÓN TRANSPORTADOR
+   ========================================== */
+
+.boton-transportador {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 1000;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.boton-transportador:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ==========================================
+   🔄 PANEL
+   ========================================== */
+
+.panel-transportador {
+    position: fixed;
+
+    right: 20px;
+    bottom: 80px;
+
+    width: 360px;
+
+    max-width: calc(100vw - 40px);
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    z-index: 999;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.25);
+
+    border: 1px solid #e2e8f0;
+}
+
+
+/* ==========================================
+   CABECERA
+   ========================================== */
+
+.transportador-cabecera {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 18px;
+
+    border-bottom:
+        1px solid #e2e8f0;
+}
+
+.transportador-cabecera h2 {
+    margin: 0;
+
+    font-size: 19px;
+}
+
+.cerrar-transportador {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   CONTENIDO
+   ========================================== */
+
+.transportador-contenido {
+    padding: 18px;
+}
+
+.transportador-contenido label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    margin-top: 12px;
+
+    font-weight: 600;
+}
+
+.transportador-contenido select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   BOTÓN TRANSPORTAR
+   ========================================== */
+
+.boton-transportar {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   RESULTADO
+   ========================================== */
+
+.resultado-transportador {
+    margin-top: 18px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+}
+
+
+/* ==========================================
+   📱 MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .boton-transportador {
+        right: 15px;
+
+        bottom: 15px;
+
+        padding: 11px 15px;
+    }
+
+    .boton-transportador span {
+        display: none;
+    }
+
+    .panel-transportador {
+        right: 10px;
+
+        bottom: 70px;
+
+        width: calc(100vw - 20px);
+    }
+
+
+    
+}
+
+/* ================================= */
+/* 📚 REPERTORIOS */
+/* ================================= */
+
+.panel-repertorios {
+  margin: 25px auto;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.encabezado-repertorios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.encabezado-repertorios h2 {
+  margin: 0;
+}
+
+.encabezado-repertorios p {
+  margin: 6px 0 0;
+  opacity: 0.7;
+}
+
+.acciones-repertorios {
+  margin-bottom: 20px;
+}
+
+.lista-repertorios {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sin-repertorios {
+  padding: 30px;
+  text-align: center;
+  opacity: 0.7;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+}
+
+.boton-repertorios {
+  cursor: pointer;
+}
+
+.boton-cerrar {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ================================= */
+/* 📚 BOTÓN REPERTORIOS */
+/* ================================= */
+
+.boton-repertorios {
+    font-size: 18px;
+    padding: 14px 24px;
+    min-width: 190px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ================================= */
+/* 📚 TARJETAS DE REPERTORIOS */
+/* ================================= */
+
+.tarjeta-repertorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    background: #f5f5f5;
+
+    border: 1px solid #ddd;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.tarjeta-repertorio:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.info-repertorio h3 {
+    margin: 0 0 6px 0;
+}
+
+.info-repertorio p {
+    margin: 0;
+    opacity: 0.7;
+}
+
+.acciones-repertorio {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ================================= */
+/* 🎵 CANCIONES DEL REPERTORIO */
+/* ================================= */
+
+.selector-canciones-repertorio {
+    margin: 20px 0;
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f5f5f5;
+
+    border: 1px solid #ddd;
+}
+
+.lista-selector-canciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.fila-selector-cancion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 15px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+}
+
+.fila-selector-cancion small {
+    display: block;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+.fila-selector-cancion button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ================================= */
+/* 🎵 TARJETAS DEL REPERTORIO */
+/* ================================= */
+
+.tarjeta-cancion-repertorio {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.numero-cancion {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eee;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-cancion-repertorio {
+    flex: 1;
+}
+
+.info-cancion-repertorio h3 {
+    margin: 0 0 6px 0;
+}
+
+.info-cancion-repertorio p {
+    margin: 3px 0;
+
+    opacity: 0.7;
+}
+
+.btn-eliminar-cadena {
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-eliminar-cadena:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ================================= */
+/* 🔗 CONEXIONES */
+/* ================================= */
+
+.panel-conexiones {
+    margin: 25px auto;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================= */
+/* 🔗 ENCABEZADO */
+/* ================================= */
+
+.encabezado-conexiones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.encabezado-conexiones h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.encabezado-conexiones p {
+    margin: 7px 0 0;
+    color: #64748b;
+}
+
+/* ================================= */
+/* 🔗 CONTENIDO */
+/* ================================= */
+
+.contenido-conexiones {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.contenido-conexiones h3 {
+    margin-top: 0;
+}
+
+/* ================================= */
+/* 🔗 BOTÓN */
+/* ================================= */
+
+.boton-conexiones {
+    font-size: 18px;
+    padding: 14px 24px;
+    min-width: 190px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ================================= */
+/* 🔗 MÓVIL */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .panel-conexiones {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .encabezado-conexiones {
+        align-items: flex-start;
+    }
+
+    .encabezado-conexiones h2 {
+        font-size: 23px;
+    }
+
+    .boton-conexiones {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+
+/* ================================= */
+/* 🔗 SISTEMA DE CONEXIONES */
+/* ================================= */
+
+.panel-conexiones {
+    margin: 25px auto;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.encabezado-conexiones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.encabezado-conexiones h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.encabezado-conexiones p {
+    margin: 7px 0 0;
+    color: #64748b;
+}
+
+
+/* ================================= */
+/* 🔎 BUSCADOR */
+/* ================================= */
+
+.conexion-buscador {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.conexion-buscador label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-conexion {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: white;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.input-conexion:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* ================================= */
+/* 🔎 RESULTADOS */
+/* ================================= */
+
+.resultados-busqueda-conexion {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resultado-cancion-conexion {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    background: white;
+    padding: 13px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+
+    transition: 0.2s;
+}
+
+.resultado-cancion-conexion:hover {
+    border-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.resultado-cancion-conexion strong {
+    display: block;
+    font-size: 16px;
+}
+
+.resultado-cancion-conexion small {
+    display: block;
+    margin-top: 4px;
+    color: #64748b;
+}
+
+.resultado-cancion-conexion span {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* ================================= */
+/* 🎵 CANCIÓN ORIGEN */
+/* ================================= */
+
+.cancion-origen-conexion {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.conexion-origen-cabecera {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.etiqueta-conexion {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    color: #2563eb;
+}
+
+.cancion-origen-conexion h2 {
+    margin: 5px 0;
+}
+
+.cancion-origen-conexion p {
+    margin: 5px 0;
+    color: #64748b;
+}
+
+.datos-origen-conexion {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: right;
+}
+
+.datos-origen-conexion span {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    font-weight: bold;
+}
+
+
+/* ================================= */
+/* 🔘 BOTONES PRINCIPALES */
+/* ================================= */
+
+.acciones-conexion-principal {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.boton-generar-conexion {
+    background: #2563eb;
+}
+
+.boton-generar-conexion:hover {
+    background: #1d4ed8;
+}
+
+.boton-sugerencias-conexion {
+    background: #7c3aed;
+}
+
+.boton-sugerencias-conexion:hover {
+    background: #6d28d9;
+}
+
+.boton-pequeno {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.boton-secundario {
+    background: #64748b;
+}
+
+.boton-secundario:hover {
+    background: #475569;
+}
+
+
+/* ================================= */
+/* 🤖 SUGERENCIAS */
+/* ================================= */
+
+.sugerencias-conexion {
+    margin-top: 25px;
+}
+
+.titulo-conexiones h3 {
+    margin-bottom: 5px;
+}
+
+.titulo-conexiones p {
+    margin-top: 0;
+    color: #64748b;
+}
+
+#listaSugerenciasConexion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-sugerencia-conexion {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cabecera-sugerencia {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.cabecera-sugerencia h3 {
+    margin: 7px 0 3px;
+}
+
+.cabecera-sugerencia p {
+    margin: 0;
+    color: #64748b;
+}
+
+.nivel-conexion {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #ede9fe;
+    color: #6d28d9;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.puntuacion-conexion {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.datos-sugerencia {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.datos-sugerencia span {
+    background: #f8fafc;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.razones-conexion,
+.ideas-conexion {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 9px;
+    background: #f8fafc;
+}
+
+.razones-conexion ul,
+.ideas-conexion ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.intensidad-conexion {
+    margin-top: 12px;
+    padding: 11px;
+    border-radius: 9px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+}
+
+.acciones-sugerencia {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+
+/* ================================= */
+/* 🔗 EDITOR */
+/* ================================= */
+
+.editor-conexion {
+    margin-top: 25px;
+}
+
+.editor-conexion-caja {
+    padding: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.editor-conexion-caja h3 {
+    margin-top: 0;
+}
+
+.ruta-conexion {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.ruta-conexion > div {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.ruta-conexion small {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.ruta-conexion strong {
+    display: block;
+}
+
+.ruta-conexion > span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.textarea-conexion {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    resize: vertical;
+}
+
+.textarea-conexion:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.editor-conexion-caja label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.preview-conexion {
+    margin: 20px 0;
+    padding: 16px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #dbeafe;
+}
+
+.preview-cabecera {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.preview-datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.preview-datos > div {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.preview-datos small {
+    display: block;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.preview-ideas {
+    margin-top: 15px;
+}
+
+.preview-ideas ul {
+    padding-left: 20px;
+}
+
+.acciones-editor-conexion {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.boton-guardar-conexion {
+    background: #16a34a;
+}
+
+.boton-guardar-conexion:hover {
+    background: #15803d;
+}
+
+
+/* ================================= */
+/* 🔗 CONEXIONES GUARDADAS */
+/* ================================= */
+
+.conexiones-guardadas {
+    margin-top: 30px;
+}
+
+.lista-conexiones-guardadas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-conexion-guardada {
+    padding: 18px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.ruta-guardada {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.cancion-ruta {
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 9px;
+}
+
+.cancion-ruta strong,
+.cancion-ruta small {
+    display: block;
+}
+
+.cancion-ruta small {
+    margin-top: 5px;
+    color: #64748b;
+}
+
+.flecha-ruta {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.detalle-conexion-guardada {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.detalle-conexion-guardada > div {
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 9px;
+}
+
+.detalle-conexion-guardada p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.acciones-conexion-guardada {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.boton-eliminar-conexion {
+    background: #dc2626;
+}
+
+.boton-eliminar-conexion:hover {
+    background: #b91c1c;
+}
+
+
+/* ================================= */
+/* 💤 SIN CONEXIONES */
+/* ================================= */
+
+.bloque-sin-conexiones,
+.conexion-mensaje {
+    margin-top: 15px;
+    padding: 25px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    color: #64748b;
+}
+
+.bloque-sin-conexiones h3 {
+    color: #222;
+}
+
+
+/* ================================= */
+/* 📱 MÓVIL */
+/* ================================= */
+
+@media (max-width: 700px) {
+
+    .panel-conexiones {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .conexion-origen-cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .datos-origen-conexion {
+        width: 100%;
+        text-align: left;
+    }
+
+    .datos-origen-conexion span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .ruta-conexion {
+        grid-template-columns: 1fr;
+    }
+
+    .ruta-conexion > span {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+    .preview-datos {
+        grid-template-columns: 1fr;
+    }
+
+    .ruta-guardada {
+        grid-template-columns: 1fr;
+    }
+
+    .flecha-ruta {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+    .detalle-conexion-guardada {
+        grid-template-columns: 1fr;
+    }
+
+    .acciones-conexion-principal .boton,
+    .acciones-editor-conexion .boton {
+        width: 100%;
+    }
+
+    .resultado-cancion-conexion {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
+
+/* =========================================================
+   🎵 NUEVO ENCABEZADO — BIBLIOTECA MUSICAL
+   ========================================================= */
+
+body .biblioteca-header {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 45px 20px 35px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(76, 201, 240, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #090914,
+            #11112a,
+            #17143b
+        );
+
+    border-bottom:
+        1px solid
+        rgba(120, 180, 255, 0.18);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =========================================================
+   ✨ BRILLO DECORATIVO
+   ========================================================= */
+
+body .header-brillo {
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -260px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(80, 180, 255, 0.22),
+            rgba(100, 60, 220, 0.12),
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   🎼 CONTENIDO DEL HEADER
+   ========================================================= */
+
+body .header-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 18px;
+
+}
+
+
+/* =========================================================
+   🖼️ LOGO DEL MINISTERIO
+   ========================================================= */
+
+body .logo-ministerio {
+
+    display: block;
+
+    width: min(620px, 88vw);
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(91, 185, 255, 0.18)
+        );
+
+    opacity: 0;
+
+    transform:
+        translateY(-20px)
+        scale(0.96);
+
+    animation:
+        logoEntrada
+        900ms
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+
+}
+
+
+/* =========================================================
+   🎵 TÍTULO
+   ========================================================= */
+
+body .titulo-biblioteca {
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    animation:
+        tituloEntrada
+        700ms
+        ease
+        500ms
+        forwards;
+
+}
+
+
+body .titulo-biblioteca h1 {
+
+    margin: 0;
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3.4rem
+    );
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #8fe8ff,
+            #b1a2ff,
+            #ffffff
+        );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        brilloTitulo
+        6s
+        linear
+        infinite;
+
+}
+
+
+body .titulo-biblioteca p {
+
+    margin:
+        8px
+        0
+        0;
+
+    font-size: 1rem;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    letter-spacing: 0.8px;
+
+}
+
+
+/* =========================================================
+   🌟 ANIMACIONES
+   ========================================================= */
+
+@keyframes logoEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-20px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes tituloEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes brilloTitulo {
+
+    0% {
+
+        background-position:
+            0% center;
+
+    }
+
+    50% {
+
+        background-position:
+            100% center;
+
+    }
+
+    100% {
+
+        background-position:
+            0% center;
+
+    }
+
+}
+
+
+/* =========================================================
+   📱 MÓVILES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body .biblioteca-header {
+
+        padding:
+            30px
+            15px
+            28px;
+
+    }
+
+
+    body .logo-ministerio {
+
+        width:
+            min(
+                500px,
+                94vw
+            );
+
+    }
+
+
+    body .titulo-biblioteca h1 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    body .titulo-biblioteca p {
+
+        font-size:
+            0.9rem;
+
+    }
+
+}
